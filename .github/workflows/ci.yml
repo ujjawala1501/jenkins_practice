@@ -1,11 +1,12 @@
-name: Simple CI
+name: Run Script
 
 on: [push]
 
 jobs:
-  greet:
+  run-script:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Greet the user
-        run: echo "Hello, GitHub Actions!"
+      - name: Run hello.sh
+        run: ./hello.sh
+
